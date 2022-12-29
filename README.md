@@ -1,8 +1,8 @@
 # **Credit Risk Prediction**
 
-*download dataset* [here]('https://rakamin-lms.s3.ap-southeast-1.amazonaws.com/vix-assets/idx-partners/loan_data_2007_2014.csv')
+*download dataset* [here](https://rakamin-lms.s3.ap-southeast-1.amazonaws.com/vix-assets/idx-partners/loan_data_2007_2014.csv)
 
-*presentation slide* [here]('https://www.canva.com/design/DAFV1rCeUWw/ROvw4_t1EIn63n8ZedxuEA/view?utm_content=DAFV1rCeUWw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton')
+*presentation slide* [here](https://www.canva.com/design/DAFV1rCeUWw/ROvw4_t1EIn63n8ZedxuEA/view?utm_content=DAFV1rCeUWw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## **Background**
 
