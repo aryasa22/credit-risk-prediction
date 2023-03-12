@@ -6,11 +6,11 @@
 
 ## **Background**
 
-The high bad loan (loan with payment obstacles) rate causes a loss for the lending company. We need a system to help reducing the bad loan rate.
+The high non performing loan (NPL) rate causes a loss for the lending company. We need a system to help reducing the non performing loan rate.
 
 ## **Objective**
 
-Make a machine learning model that able to predict correctly that a loan will become a bad loan or a good loan.
+Make a machine learning model that able to predict correctly that a loan will become a NPL or a good loan.
 
 ## **Requirement**
 1. Numpy version: `1.21.6`
@@ -39,37 +39,30 @@ The followings are results for each preprocessing step.
 2. **Feature Extracion:** Extracting values from existing features. Total of 8 features are extracted.
 3. **Missing Values:** Dropping 4 features with more than 40% missing values. Replacing missing values for other features with 0 or feature's median.
 4. **Feature Encoding:** Applying Weight of Evidence encoding for categorical features.
-5. **Feature Selection:** Dropping features with high correlation wit other features. The dropped features is the features with smaller informational value.
+5. **Feature Selection:** Dropping features with high correlation with other features. The dropped features is the features with smaller informational value.
 6. **Feature Transformation:** Yeo Johnson transformation for numerical features. Then, all features are scaled by MinMaxScaler.
 7. **Imbalance Handling:** Oversampling by SMOTE method with a sampling strategy of 0.5.
 
 ## **Modeling**
 
-Logistic Regression model was choosen for this project since the model is match to the case and the preprocessing techniques. Here are the model performance details.
+For this project, I experimented with two machine learning models, namely Logistic Regression and Decision Tree Classifier. After evaluating their performance, I decided to implement the Decision Tree Classifier as it showed better results compared to Logistic Regression.
 
-**Hyperparameters** : max_iter = 500
+**Hyperparameters** : max_depth = 8
 
-**Performance Scores (Train)**
-
-1. Accuracy: 0.94
-2. Precision: 0.97
-3. Recall: 0.84
-4. F1: 0.9
-5. AUC: 0.96
-
-**Performance Scores (Test)**
+**Performance Scores (Test Set)**
 
 1. Accuracy: 0.97
-2. Precision: 0.89
-3. Recall: 0.84
-4. F1: 0.87
-5. AUC: 0.96
+2. Precision: 0.83
+3. Recall: 0.95
+4. F1: 0.89
+5. AUC: 0.99
+
 
 Due to target imbalance, AUC was choosen for the main metric.
 
 
-Refers to the AUC score (>85%), the trained Logistic Regression model has a good performance. The model also able to correctly predict 84% of entire bad loans.
+Refers to the AUC score (>85%), the trained Logistic Regression model has a good performance. The model also able to correctly predict 95% of entire non performing loans.
 
 ## **Conclusion**
 
-The trained Logistic Regression model for this project has a very good performance. The model has a AUC score of 96% that means the model can correctly predict 96% from total prediction. The model can correctly predicted about 84% of entire bad loans.
+The trained Decision Tree Classifier model for this project has a very good performance. The model has a AUC score of 99% that means the model can correctly predict 99% from total prediction. The model can correctly predicted about 95% of entire non performing loans.
